@@ -126,6 +126,8 @@ public class InviProvider extends ContentProvider {
 
     private int updateInvi(Uri uri, ContentValues values, String selection, String[] selectionArgs){
         // TODO: 30/11/2016  update this space add return statement
+    return 1;
+
     }
 
     @Override
