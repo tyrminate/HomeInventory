@@ -1,5 +1,6 @@
 package com.example.tyron.homeinventory;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.tyron.homeinventory.Data.InviDbHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        InviDbHelper mDbHelper = new InviDbHelper(this);
+
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
     }
 
     @Override
